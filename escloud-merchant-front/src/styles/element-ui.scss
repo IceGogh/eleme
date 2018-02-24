@@ -1,0 +1,160 @@
+ //覆盖一些element-ui样式
+ .block-checkbox {
+   display: block;
+ }
+
+ .operation-container {
+   .cell {
+     padding: 10px !important;
+   }
+   .el-button {
+     &:nth-child(3) {
+       margin-top: 10px;
+       margin-left: 0px;
+     }
+     &:nth-child(4) {
+       margin-top: 10px;
+     }
+   }
+ }
+
+ .el-upload {
+   input[type="file"] {
+     display: none !important;
+   }
+ }
+
+ .el-upload__input {
+   display: none;
+ }
+
+ .cell {
+   .el-tag {
+     margin-right: 8px;
+   }
+ }
+
+ .small-padding {
+   .cell {
+     padding-left: 8px;
+     padding-right: 8px;
+   }
+ }
+
+ .status-col {
+   .cell {
+     padding: 0 10px;
+     text-align: center;
+     .el-tag {
+       margin-right: 0px;
+     }
+   }
+ }
+
+ //暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+ .el-dialog {
+   transform: none;
+   left: 0;
+   position: relative;
+   margin: 0 auto;
+ }
+
+ //文章页textarea修改样式
+ .article-textarea {
+   textarea {
+     padding-right: 40px;
+     resize: none;
+     border: none;
+     border-radius: 0px;
+     border-bottom: 1px solid #bfcbd9;
+   }
+ }
+
+ //element ui upload
+ .upload-container {
+   .el-upload {
+     width: 100%;
+     .el-upload-dragger {
+       width: 100%;
+       height: 200px;
+     }
+   }
+ }
+ // common style
+ @font-face { font-family: "General fonts"; }
+ .icon {
+   width: 1em; height: 1em;
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+ }
+ @media screen and (max-width: 1440px) { html { font-size: calc(1440px/19.2) !important; } }
+ html { font-size: calc(100vw/19.2); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizelegibility; }
+
+ body { min-width: 1440px; height: auto; font: 16px/1.14 "General fonts", "microsoft sans serif", "PingFang SC", "PingHei", Helvetica, Arial, sans-serif !important; letter-spacing: 0; color: #323232; line-height: 1; overflow-x: scroll; margin: 0 auto; background-color: #fff; }
+
+ //.el-table--striped .el-table__body tr.el-table__row--striped.current-row td, .el-table__body tr.current-row>td, .el-table__body tr.hover-row.current-row>td, .el-table__body tr.hover-row.el-table__row--striped.current-row>td, .el-table__body tr.hover-row.el-table__row--striped>td, .el-table__body tr.hover-row>td {background-color:#89cbee!important; color: #fff!important;}
+ //.el-table--striped .el-table__body tr.el-table__row--striped.current-row td, .el-table__body tr.current-row>td, .el-table__body tr.hover-row.current-row>td, .el-table__body tr.hover-row.el-table__row--striped.current-row>td, .el-table__body tr.hover-row.el-table__row--striped>td, .el-table__body tr.hover-row>td a {
+ //  color: #fff;
+ //}
+ .el-table__row.current-row td a {
+   color: #fff;
+ }
+ .el-table__row td button {
+   background-color: #fff;
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+ .el-table__row.hover-row td button:hover {
+   background-color: #b3d8ff;
+   color: #fff;
+ }
+ .simpleFilter .button-group .searchSimpleBtn {
+   line-height: 38px!important;
+ }
+ .el-button--primary.is-plain {
+   margin-left: 20px;
+ }
+ .searchProBtn button {
+   margin-left: 10px!important;
+ }
+ button.firstBtn {
+   margin-left: 0;
+ }
+ .el-tree {
+   margin-top: 10px!important;
+ }
+ .el-tree-node__content {
+   height: 36px!important;
+ }
+ .el-tree-node__expand-icon.is-leaf {
+   color: #eee!important;
+ }
+ .el-tree-node.is-current.is-focusable  .el-tree-node__content{
+   color: rgb(64, 158, 255) !important;
+ }
+ .el-table__body-wrapper.is-scroll-left table {
+   border-collapse: separate;
+   border-spacing: 0;
+ }
+ // 封装 按钮
+ .el-button--edenep-white-btn {
+   width: 94px;
+   color: #249ede;
+   background: #fff;
+   border: 1px #27abf1 solid;
+ }
+ .el-button--edenep-white-btn:hover {
+   color: #fff;
+   background: linear-gradient(to bottom, #29b6ff, #249fdf);
+ }
+ .el-button--edenep-blue-btn {
+   width: 94px;
+   color: #fff;
+   background: linear-gradient(to bottom, #29b6ff, #249fdf);
+   border: 1px #27abf1 solid;
+ }
+ .el-button--edenep-blue-btn:hover {
+   color: #249ede;
+   background: #fff;
+ }

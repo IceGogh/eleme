@@ -1,0 +1,30 @@
+
+//表格行详情显示央视 20171124 by huhongyu
+.multipleTable-expand{
+  margin-bottom: 0px;
+  margin-right: 0px;
+}
+.multipleTable-expand .el-form-item{
+  width: 22%;
+  margin-bottom: 5px;
+}
+.multipleTable-expand .el-form-item .el-form-item__label{
+  font-size: 12px;
+  width: 25%;
+  color: #99a9bf;
+}
+.multipleTable-expand .el-form-item .el-form-item__content{
+  display: inline-block;
+  vertical-align: top;
+  line-height: 36px;
+  position: relative;
+  width: 75%;
+  font-size: 12px;
+  color: #000000;
+  word-wrap: break-word;
+  word-break: normal;
+}
+.el-tooltip a{
+   color:#20a0ff;
+   text-decoration: underline;
+ }

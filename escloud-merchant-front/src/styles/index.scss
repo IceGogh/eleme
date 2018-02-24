@@ -1,0 +1,435 @@
+@import './mixin.scss';
+@import './btn.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  //font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a:active,
+a:focus {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+code {
+  background: #eef1f6;
+  padding: 15px 10px;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 36px;
+
+  a {
+    color: #337ab7;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.2s ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+//main-container全局样式
+
+.app-container {
+  padding: 20px;
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.pagination-container {
+  margin-top: 10px;
+  border: 1px solid #dfe6ec;
+  padding: 5px 10px;
+
+  .el-pagination {
+    text-align: right;
+    padding: 0px;
+  }
+}
+
+.editor-container .CodeMirror {
+  height: 100%!important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.svg-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+
+  &.draft {
+    background: #d0d0d0;
+  }
+
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.deletedTag,
+.draftTag,
+.publishedTag {
+  color: #fff;
+  background-color: $panGreen;
+  line-height: 1;
+  text-align: center;
+  margin: 0;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  position: absolute;
+  left: 20px;
+  top: 10px;
+}
+
+.draftTag {
+  background-color: $yellow;
+}
+
+.deletedTag {
+  background-color: $red;
+}
+
+.input-label {
+  font-size: 14px;
+  color: #48576a;
+  line-height: 1;
+  padding: 11px 5px 11px 0;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+.no-marginLeft {
+  .el-checkbox {
+    margin: 0 20px 15px 0;
+  }
+
+  .el-checkbox+.el-checkbox {
+    margin-left: 0;
+  }
+}
+//refine vue-multiselect plugin
+
+.multiselect {
+  line-height: 16px;
+}
+
+.multiselect--active {
+  z-index: 1000 !important;
+}
+//refine simplemde
+
+.simplemde-container {
+  .CodeMirror-fullscreen,
+  .editor-toolbar.fullscreen {
+    z-index: 1003;
+  }
+}
+//暂时性解决diolag 问题 https://github.com/ElemeFE/element/issues/2461
+
+.el-dialog {
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+}
+//github-corner
+
+.github-corner:hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
+}
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+.el-tree {
+  font-size: 12px;
+  height: 640px;
+}
+
+.filter-container {
+  padding-bottom: 0;
+}
+
+.filter-container .filter-item {
+  display: block;
+  vertical-align: middle;
+  margin-bottom: 6px;
+  padding-right: 20px;
+}
+
+.filter-container .button-group {
+  margin-bottom: 6px;
+}
+
+.filter-container .button-row .el-button {
+  margin-left: 10px;
+}
+
+.el-select {
+  display: block;
+}
+
+.form-bottom {
+  margin-bottom: 12px;
+}
+
+.filter-container .button-group .searchProBtn .el-button {
+  float: right;
+  margin-top: 4px;
+}
+
+.simpleFilter .button-group .simple-btn {
+  margin-bottom: 0;
+}
+
+.simpleFilter .button-group .first .el-form-item__label {
+  display: none;
+}
+
+.simpleFilter .button-group .first .el-form-item__content {
+  margin-left: 0px !important;
+}
+
+.simpleFilter .button-group .searchSimpleBtn {
+  padding-left: 10px;
+  line-height: 34px;
+}
+
+.simpleFilter .button-group .searchProBtn {
+  line-height: 34px;
+}
+
+.simpleFilter .button-group .searchProBtn .el-button {
+  float: right;
+  margin-top: 4px;
+}
+
+.simpleFilter .button-group .searchProBtnAfter {
+  line-height: 34px;
+  margin-bottom: 5px;
+}
+/*头部样式 navbar*/
+
+.el-menu.navbar {
+  background-color: #373d41;
+}
+
+.el-tag {
+  background-color: #646669;
+  color: #aeb0b1;
+}
+
+.el-tag--primary {
+  color: #fff;
+}
+/*sildebar*/
+
+.el-menu--dark {
+  background-color: #333744;
+}
+
+.el-menu--dark .el-submenu .el-menu {
+  background-color: #333744;
+}
+
+.el-menu-item,
+.el-submenu__title {
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+}
+
+.el-menu--dark .el-menu-item,
+.el-menu--dark .el-submenu__title {
+  color: #fff;
+}
+
+.el-menu--horizontal.el-menu--dark .el-submenu .el-menu-item.is-active,
+.el-menu-item.is-active {
+  color: #20a0ff;
+}
+
+// 字体大小
+.el-form-item__label {
+  font-size: 12px;
+}
+
+.el-input {
+  font-size: 12px;
+}
+
+.el-table {
+  font-size: 12px;
+}
+
+.el-pagination button, .el-pagination span {
+  font-size: 12px;
+}
+
+.el-pager li {
+  font-size: 12px;
+}
+
+.el-textarea textarea {
+  font-size: 12px;
+}
+
+.el-button span {
+    font-size: 12px;
+}
+
+// 日期框的长度
+.el-date-editor.el-input {
+  width: 100%;
+  min-width: 296px;
+}
+
+.cell a{
+  color:#20a0ff;
+  text-decoration: underline;
+}
+.transfer_dialog .el-dialog__body{
+  padding-left: 10%;
+}
+
+.transfer_dialog .el-dialog--tiny{
+  top: 15%;
+  width:40%;
+}
